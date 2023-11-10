@@ -310,159 +310,254 @@ function actualizarContenido() {
     }
     else if (pagina === 3) {
         cuestionario.innerHTML = `
-        
+        <h1 style="color: #1B396A; padding: 40px;"></h1>
+        <h1>Perfil y calidad</h1>
+            <h4>II. Pertinencia y disponibilidad de medios y recursos para el aprendizaje</h4>
+            <p>Califique la calidad de la educación profesional proporcionada por el personal docente, así como el Plan de
+                Estudios de la <br> carrera que cursó y las condiciones del plantel en cuanto a infraestructura</p>
+                
         <div class="container-fluid" >
-		<form action="pagina.php" method="GET" style="margin: 13%; background-color:#F2F2F2; padding: 0%; margin-left: -10px;">
-			<!-- primera fila -->
-			<div class="form-group">
-				<div class="row">
-					
-					<!-- primera columna -->
-					<div class="col-md-3">
-						<label style="color:#203c6c" for="validationTooltip01">Nombre</label>
-						<input  class="form-control"type="text" name="nombres" pattern="[A-Za-z]+" title="Solo se permiten letras" placeholder="Ej. Martina"> 
-					</div>
-					<!-- segunda columna -->
-					<div class="col-md-3">
-						<label style="color:#203c6c" for="validationTooltip01">Apellido Paterno</label>
-						<input  class="form-control"type="text" name="apellidoM" pattern="[A-Za-z]+" title="Solo se permiten letras" placeholder="Ej. Hernandez">
-					</div>
-					<!-- tercera columna -->
-					<div class="col-md-3">
-						<label style="color:#203c6c" for="validationTooltip01">Apellido Materno</label>
-						<input  class="form-control"type="text" name="apellidoP" pattern="[A-Za-z]+" title="Solo se permiten letras" placeholder="Ej. Lopez">
-					</div>
-					<div class="col-md-3">
-						<label style="color:#203c6c" for="validationTooltip01">Numero de control</label>
-						<input  class="form-control"type="number" name="Ncontrol" min="8" max="8"  placeholder="Ej. 18230752" >
-						
-					</div>
-
-					
-				</div>
-			</div>
-			<!-- segunda fila -->
-			<div class="form-group">
-				<div class="row">
-					<!-- primera columna -->
-					<div class="col-md-3">
-						<label style="color:#203c6c" for="validationTooltip01">Feha de nacimiento</label>
-						<input  class="form-control"type="date" name="nacimiento" placeholder="Fecha de nacimiento">
-					</div>
-					<!-- segunda columna -->
-					<div class="col-md-3" >
-						<label style="color:#203c6c" for="validationTooltip01">CURP</label>
-						<input  class="form-control"type="text" name="curp" placeholder="Ej. FEPM890204HASRRN08">
-					</div>
-					<!-- tercera columna -->
-					<div class="col-md-3">
-						<label style="color:#203c6c"  for="validationTooltip01">Sexo</label>
-						<select class="form-control" >
-							<option value="" selected disabled>Selecciona una opción</option>
-							<option>Femenino</option>
-							<option>Masculino</option>
-						</select>
-					</div>
-					<!-- cuarta columna -->
-					
-					<div class="col-md-3">	
-						<label style="color:#203c6c" for="validationTooltip01">Estado civil</label>
-						<select class="form-control" >
-							<option value="" selected disabled>Selecciona una opción</option>
-							<option>Soltero(a)</option>
-							<option>Casado(a)</option>
-							<option>Otro</option>
-						</select>
-						
-					</div>
-				</div>
-			</div>
-			<!-- tercera fila -->
-			<div class="form-group">
-				<div class="row">
-					<!-- primera columna -->
-					<div class="col-md-3">
-						<select  class="form-control">
-							<option>Registro civil</option>
-							<option>Tarjeta de identidad</option>
-							<option>Cedula</option>
-						</select>
-					</div>
-					<!-- segunda columna -->
-					<div class="col-md-3">
-						<input  class="form-control"type="number" name="ndocumento" placeholder="Numero de documentó">
-					</div>
-					<!-- tercera columna -->
-					<div class="col-md-3">
-						<input class="form-control" type="date" name="expedicion" placeholder="Expedición">
-					</div>
-				</div>
-			</div>
-
-				<!-- uarta fila -->
-			<div class="form-group">
-				<div class="row">
-					
-					<!-- primera columna -->
-					<div class="col-md-3">
-						<p>Nombre</p> 
-						<input  class="form-control"type="text" name="nombres" placeholder="Nombres"> 
-					</div>
-					<!-- segunda columna -->
-					<div class="col-md-3">
-						<p>Apellido Paterno</p> 
-						<input  class="form-control"type="text" name="apellidos" placeholder="Apellidos">
-					</div>
-					<!-- tercera columna -->
-					<div class="col-md-3">
-						<p>Apellido Materno</p> 
-						<input  class="form-control"type="date" name="nacimiento" placeholder="Fecha de nacimiento">
-					</div>
-					<div class="col-md-3">
-						<p>Numero de control</p> 
-						<input  class="form-control"type="date" name="nacimiento" placeholder="Fecha de nacimiento">
-					</div>
-
-					
-				</div>
-			</div>
-			<button class="btn btn-default" type="submit">Guardar</button>
-		</form>
-	</div>
+		<form action="pagina.php" method="GET" style="margin: 13%; background-color:#F2F2F2; padding: 0%; margin-left: -10px; margin-top: 1%;">
+        <div class="container">
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <h6 style="color: #1B396A; padding: 10px;">1. Calidad de los docentes:</h6>
+                    <select>
+                        <option selected>Seleccione una opcion</option>
+                        <option value="1">Muy buena</option>
+                        <option value="2">Buena</option>
+                        <option value="3">Regular</option>
+                        <option value="4">Regular</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <h6 style="color: #1B396A; padding: 10px;">2. Plan de estudios:</h6>
+                    <select>
+                        <option selected>Seleccione una opcion</option>
+                        <option value="1">Muy buena</option>
+                        <option value="2">Buena</option>
+                        <option value="3">Regular</option>
+                        <option value="4">Regular</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <h6 style="color: #1B396A; padding: 10px;">3. Oportunidad de participar en proyectos
+                        <br>de investigación y desarrollo:</h6>
+                    <select>
+                        <option selected>Seleccione una opcion</option>
+                        <option value="1">Muy buena</option>
+                        <option value="2">Buena</option>
+                        <option value="3">Regular</option>
+                        <option value="4">Regular</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <h6 style="color: #1B396A; padding: 10px;">4. Enfasis que se le prestaba a la
+                        investigación dentro del proceso de enseñanza:</h6>
+                    <select>
+                        <option selected>Seleccione una opcion</option>
+                        <option value="1">Muy buena</option>
+                        <option value="2">Buena</option>
+                        <option value="3">Regular</option>
+                        <option value="4">Regular</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <h6 style="color: #1B396A; padding: 10px;">5. Satisfacción con las condiciones de
+                        (infraestructura):</h6>
+                    <select>
+                        <option selected>Seleccione una opcion</option>
+                        <option value="1">Muy buena</option>
+                        <option value="2">Buena</option>
+                        <option value="3">Regular</option>
+                        <option value="4">Regular</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <h6 style="color: #1B396A; padding: 10px;">6. Experiencia obtenida a través de la
+                        residencia profesional:</h6>
+                    <select>
+                        <option selected>Seleccione una opcion</option>
+                        <option value="1">Muy buena</option>
+                        <option value="2">Buena</option>
+                        <option value="3">Regular</option>
+                        <option value="4">Regular</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
         `;
     }
     else if (pagina === 4) {
         cuestionario.innerHTML = `
-        <form action="pagina.php" method="GET" style="margin: 13%; background-color:#F2F2F2; padding: 0%; margin-left: -10px;">
-            
-        
-        
-        
-        
-        <div class="content-wrapper">
-    <div class="text-content">
-    <img src="https://sic.cultura.gob.mx/images/65091" class="side-image">
-    <h1>Ubicación laboral</h1>
-        <p>Instituto tecnologico de minatitlán</p>
-        <p>Fecha:</p>
-        <p>Estimado Egresado:</p>
-        <p>Los servicios educativos de este instituto tecnologico debe estar en mejora continua para
-            asegurar la pertinencia de los conocimientos adquiridos y mejorar sistematicamente, para
-            colaborar en la formacion integral de nuestros alumnos.
-            para esto es indispensable tomarte en cuenta como factor de cambios y reformas, por lo que por
-            este medio solicitamos tu valiosa
-            participacion y cooperacion en esta investigacion del.</p>
-        <p>Seguimiento de Egresados, que nos permitirá obtener informacion valiosa para analizar la
-            problematica del mercado laboral y sus
-            caracteristicas, asi como las competencias laborales de nuestros egresados.
-            Las respuestas del cuestionario anexo seran tratadas con absoluta confidencialidad y con fines
-            meramente estatidiscos.</p>
-        <p>con nuestro agradecimiento por tu cooperación, recibe un cordial saludo.</p>
-        <p>Atentamente</p>
-        <p>SERGIO FERNANDO GARIBAY ARMENTA</p>
-        <p>Director del plantel</p>
-    </div>
+        <h1 style="color: #1B396A; padding: 40px;"></h1>
+        <h1>Desempeño y espectativas</h1>
+<h4>IV. Desempeño profesional de los egresados</h4>
+<h5>Marcar los campos que correspondan a su trayectoria profesional</h5>
 
+        <form action="pagina.php" method="GET" style="margin: 13%; background-color:#F2F2F2; padding: 0%; margin-left: -10px; margin-top: 1%;">
+            
+        <div class="form-group1">
+            <div class="row1">
+      
+                <div class="col">
+                    <h6 style="color: #1B396A; padding: 10px;">1. Eficiencia para realizar las actividades
+                     laborales,
+                     en relación son su formación académica:</h6>
+             <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">Muy eficiente</option>
+              <option value="2">Eficiente</option>
+              <option value="3">Poco eficiente</option>
+              <option value="4">Deficiente</option>
+            </select>
+          </div>
+      
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">2. Como califica su formación académica con
+              respecto a su desempeño laboral:</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">Excelente</option>
+              <option value="2">Bueno</option>
+              <option value="3">Regular</option>
+              <option value="4">Malo</option>
+              <option value="4">Pésimo</option>
+            </select>
+          </div>
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">3. Utilidad de las residencias profesionales
+              para su desarollo laboral y profesional:</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">Excelente</option>
+              <option value="2">Bueno</option>
+              <option value="3">Regular</option>
+              <option value="4">Malo</option>
+              <option value="4">Pésimo</option>
+            </select>
+          </div>
+
+          <h6>4. Aspectos que valora la empresa u organismo para la
+            contratación de egresados. Llena el formulario, donde 1 es es poco y 5 mucho.</h6>
+
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">Área o campo de estudio:</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">Titulación:</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">Competencia laboral: análisis, aprendizaje,
+              trabajo en equipo.</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">Experiencia laboral/ Práctica (antes de
+              egresar):</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">Capacidad de liderazgo:</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">Conocimiento de idiomas extranjeros:</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">Posicionamiento de la institución de egreso:
+            </h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">Recomendaciones / Referencias:</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">Personalidad / Actitudes:</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="col">
+            <h6 style="color: #1B396A; padding: 10px;">Otros aspectos:</h6>
+            <select>
+              <option selected>Seleccione una opcion</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+        </div>
+      </div>
         `;
     }
     else if (pagina === 5) {
