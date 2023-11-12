@@ -2,29 +2,30 @@ let pagina = 1; // Página actual (inicialmente, página 1)
 
 // Función para cambiar al contenido de la siguiente página
 function siguientePagina() {
-    if (pagina < 5) { // Cambia el número según el número total de páginas
-        pagina++;
-        actualizarContenido();
-    }
+  if (pagina < 5) {
+    // Cambia el número según el número total de páginas
+    pagina++;
+    actualizarContenido();
+  }
 }
 
 // Función para cambiar al contenido de la página anterior
 function regresarPagina() {
-    if (pagina > 1) {
-        pagina--;
-        actualizarContenido();
-    }
+  if (pagina > 1) {
+    pagina--;
+    actualizarContenido();
+  }
 }
 
 // Función para actualizar dinámicamente el contenido según la página
 function actualizarContenido() {
-    const progressBar = document.getElementById('progress-bar');
-    const cuestionario = document.getElementById('cuestionario');
-    const footer = document.getElementById('footer');
-    const totalPaginas = 5;
-    // Actualizar la barra de progreso
-    if (pagina === 1) {
-        progressBar.innerHTML = `
+  const progressBar = document.getElementById("progress-bar");
+  const cuestionario = document.getElementById("cuestionario");
+  const footer = document.getElementById("footer");
+  const totalPaginas = 5;
+  // Actualizar la barra de progreso
+  if (pagina === 1) {
+    progressBar.innerHTML = `
             <div class="circle filled">
                 <span class="checkmark">&#10003;</span>
                 <div class="top-text">
@@ -66,8 +67,8 @@ function actualizarContenido() {
                 <span class="bottom-text">Aprox 5 min</span>
                 </div>
         `;
-    } else if (pagina === 2) {
-        progressBar.innerHTML = `
+  } else if (pagina === 2) {
+    progressBar.innerHTML = `
         <div class="circle filled">
                 <span class="checkmark">&#10003;</span>
                 <div class="top-text">
@@ -110,9 +111,8 @@ function actualizarContenido() {
                 <span class="bottom-text">Aprox 5 min</span>
                 </div>
         `;
-    }
-    else if (pagina === 3) {
-        progressBar.innerHTML = `
+  } else if (pagina === 3) {
+    progressBar.innerHTML = `
         <div class="circle filled">
                 <span class="checkmark">&#10003;</span>
                 <div class="top-text">
@@ -156,9 +156,8 @@ function actualizarContenido() {
                 <span class="bottom-text">Aprox 5 min</span>
                 </div>
         `;
-    }
-    else if (pagina === 4) {
-        progressBar.innerHTML = `
+  } else if (pagina === 4) {
+    progressBar.innerHTML = `
  
         <div class="circle filled">
                 <span class="checkmark">&#10003;</span>
@@ -204,9 +203,8 @@ function actualizarContenido() {
                 <span class="bottom-text">Aprox 5 min</span>
                 </div>
         `;
-    }
-    else if (pagina === 5) {
-        progressBar.innerHTML = `
+  } else if (pagina === 5) {
+    progressBar.innerHTML = `
         <div class="circle filled">
                 <span class="checkmark">&#10003;</span>
                 <div class="top-text">
@@ -252,11 +250,11 @@ function actualizarContenido() {
                 <span class="bottom-text">Aprox 5 min</span>
                 </div>
         `;
-    }
+  }
 
-    // Actualizar contenido del cuestionario
-    if (pagina === 1) {
-        cuestionario.innerHTML = `
+  // Actualizar contenido del cuestionario
+  if (pagina === 1) {
+    cuestionario.innerHTML = `
         <form action="pagina.php" method="GET" style="margin:3%; background-color:withe; padding: 3%; margin-top: 0px; margin-left: -50px; ">
 <div class="content-wrapper">
     <div class="text-content">
@@ -286,8 +284,8 @@ function actualizarContenido() {
 
 </div>
         `;
-    } else if (pagina === 2) {
-        cuestionario.innerHTML = `
+  } else if (pagina === 2) {
+    cuestionario.innerHTML = `
         <form action="pagina.php" method="GET" style="margin:3%; background-color:withe; padding: 3%; margin-top: -20px; margin-left: -50px; ">
             <div class="content-wrapper">
     <div class="text-content">
@@ -307,11 +305,11 @@ function actualizarContenido() {
     </div>
 
         `;
-    }
-    else if (pagina === 3) {
-        cuestionario.innerHTML = `
+  } else if (pagina === 3) {
+    cuestionario.innerHTML = `
         <h1 style="color: #1B396A; padding: 40px;"></h1>
-        <h1>I. Perfil del Egresado</h1>
+        <h1>Perfil y calidad</h1>
+        <h4>I. Perfil del Egresado</h4>
         <div class="container-fluid" >
 		<form action="pagina.php" method="GET" style="margin:3%; background-color:#F2F2F2; padding: 3%; margin-left: -10px;">
 			<div class="form-group">
@@ -613,9 +611,8 @@ function actualizarContenido() {
         </div>
     </div>
         `;
-    }
-    else if (pagina === 4) {
-        cuestionario.innerHTML = `
+  } else if (pagina === 4) {
+    cuestionario.innerHTML = `
         <h1 style="color: #1B396A; padding: 40px;"></h1>
         <h1>Desempeño y espectativas</h1>
 <h4>IV. Desempeño profesional de los egresados</h4>
@@ -795,9 +792,8 @@ function actualizarContenido() {
         </div>
       </div>
         `;
-    }
-    else if (pagina === 5) {
-        cuestionario.innerHTML = `
+  } else if (pagina === 5) {
+    cuestionario.innerHTML = `
         <form action="pagina.php" method="GET" style="margin: 13%; background-color:#F2F2F2; padding: 0%; margin-left: 10px;">
         <div class="content12">
         <div class="text-content">
@@ -903,31 +899,27 @@ function actualizarContenido() {
     </div>
 
         `;
-    }
+  }
 
-    if (pagina === 1) {
-        footer.innerHTML = `
+  if (pagina === 1) {
+    footer.innerHTML = `
         <span class="page-counter1">${pagina}/${totalPaginas}</span>
         <button id="goForward" class="button-forward" onclick="siguientePagina()"></button>
         `;
-
-    }
-    else if (pagina === 5) {
-        footer.innerHTML = `
+  } else if (pagina === 5) {
+    footer.innerHTML = `
         <button id="goBackward" class="button-backward" onclick="regresarPagina()"></button> 
         <span class="page-counter5">${pagina}/${totalPaginas}</span> 
         `;
-    }
-    else {
-        footer.innerHTML = `
+  } else {
+    footer.innerHTML = `
         <button id="goBackward" class="button-backward" onclick="regresarPagina()"></button>
         <span class="page-counter">${pagina}/${totalPaginas}</span>
         <button id="goForward" class="button-forward" onclick="siguientePagina()"></button>   
         `;
-    }
-
+  }
 }
 
 window.onload = function () {
-    actualizarContenido();
+  actualizarContenido();
 };
